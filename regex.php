@@ -82,7 +82,7 @@ foreach ($regexs as $key => $value) {
 		$flag = '/g';
 	}
 	?>
-	<pre>[<b><?php echo sprintf("%02d", $id) ?></b>] <span style="background-color: yellow"><?php echo htmlspecialchars($s) ?> <font color="red"><?php echo $flag ?></font> <?php echo (($r != null) ? htmlspecialchars($r) : '<font color="gray"><i>null</i></font>') ?></span> [<a href="?site=<?php echo $the_site['name'] ?>&xoa_id=<?php echo $id ?>" onclick = "if (! confirm('Xoá?')) { return false; }">xóa</a> | <a href="edit.php?id=<?php echo $id ?>" onclick = "if (! confirm('Xoá?')) { return false; }">sửa</a>]</pre>
+	<pre>[<b><?php echo sprintf("%02d", $id) ?></b>] <span style="background-color: yellow"><?php echo htmlspecialchars($s) ?> <font color="red"><?php echo $flag ?></font> <?php echo (($r != null) ? htmlspecialchars($r) : '<font color="gray"><i>null</i></font>') ?></span> [<a href="?site=<?php echo $the_site['name'] ?>&xoa_id=<?php echo $id ?>" onclick = "if (! confirm('Xoá?')) { return false; }">xóa</a> | <a href="edit.php?id=<?php echo $id ?>">sửa</a>]</pre>
 	<?php
 }
 ?>
