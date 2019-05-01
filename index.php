@@ -48,8 +48,9 @@ if (isset($_POST['submit'])) {
 		</a></p>';
 		echo '<div style="white-space: nowrap;overflow: auto;">';
 		foreach ($tit[1] as $key => $value) {
+			preg_match('/truyencv\.com\/([a-z0-9-]+)\//', $url, $name);
 			$value = preg_replace('/.*?-\s*(.*)/', '$1', $value);
-			echo "<pre><a href='bookmark.php?title={$value}'>$key</a> => <a href='getTCV.php?link={$urls[$key]}'>$value</a></pre>\n";
+			echo "<pre><a href='bookmark.php?title={$name[1]} • {$value}'>$key</a> => <a href='getTCV.php?link={$urls[$key]}'>$value</a></pre>\n";
 		}
 		echo '</div>';
 
